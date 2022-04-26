@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans 
+    http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+<bean id ="Address" class = "Q7.Address" >
+        <constructor-arg value="eluru road"/>
+        <constructor-arg value="Vijayawada"/>
+        <constructor-arg value="Andhrapradesh"/>
+        <constructor-arg value="521104"/>
+        <constructor-arg value="India"/>
+    </bean>
+    <bean id ="Customer1" class = "Q7.Customer">
+        <property name="Customerid" value="1" />
+        <property name="Customername" value="Ganesh"  />
+        <property name="CustomerContact" value="8795486213" />
+        <property name="adress" ref = "Address" />
+    </bean>
+    <bean id ="Customer2" class = "Q7.Customer">
+        <property name="Customerid" value="2" />
+        <property name="Customername" value="venkat"  />
+        <property name="CustomerContact" value="7894562310" />
+        <property name="adress" ref = "Address" />
+    </bean>
+
+    
+</beans>

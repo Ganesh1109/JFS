@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans 
+    http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd"
+default-init-method = "myInit" default-destroy-method = "myDestroy" ><!--  |  this is given inside beans which is used ad default beforeAll and afterAll during lifecycle of beans  -->
+    
+<context:annotation-config/>
+
+
+
+	<bean id="tri" class = "Q9.Triangle"  init-method = "myInit" destroy-method = "myDestroy"> <!--  here init-method and destroy-method are called inside bean. these are executed after default-init-method&default-destroy-method if they are available and executed before any bean is executed  -->		
+		
+	</bean>
+</beans>

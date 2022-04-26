@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans 
+    http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+    
+    
+    <bean id="List" class="Q2.Question" > 
+    <constructor-arg  value="1"/>
+    <constructor-arg  value="who are you? where r u from?"/>
+    <constructor-arg index="2">  
+    <list>
+    <value>i am Ganesh</value>
+    <value>i am from Vijayawada</value>    
+    </list>
+    </constructor-arg>  
+</bean>  
+
+    <bean id="Set" class="Q2.Question" >  
+    <constructor-arg  value="2"/>
+    <constructor-arg  value="who are you? where r u from?"/>
+    <constructor-arg index="2">  
+    <set>  
+     <value>i am Ganesh</value>
+    <value>i am from Vijayawada</value>  
+    </set>  
+    </constructor-arg>  
+</bean>  
+
+  <bean id="Map" class="Q2.Question">  
+    <constructor-arg   value="3"/>
+    <constructor-arg  value="who are you? where r u from?"/>
+    <constructor-arg index="2">  
+    <map>  
+    <entry key="1" value="i am ganesh"></entry>
+    <entry key="2" value="i am from vijayawada"></entry>
+    </map>  
+    </constructor-arg>  
+</bean>  
+    
+</beans>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+             http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="cust" class="Q1.Customer">
+		<property name="custID" value = "23" />
+		<property name="custName" value = "Ganesh" />
+		<property name="custNumber" value = "75120" />
+		<property name="custAddress" >
+			<bean class="Q1.Address">   <!-- Inner bean is called here rather than calling using ref -->
+				<property name="street" value="eluru road" />
+				<property name="city" value="Vijayawada" />
+				<property name="state" value="AP" />
+				<property name="country" value="INDIA" />
+				<property name="zip" value="521104" />
+
+			</bean>
+		</property>
+	</bean>
+</beans>             
