@@ -1,0 +1,15 @@
+db:
+  connection: 'test-component' 
+  host: 129.0.0.1
+  port: 2400
+
+my:
+  greeting: Hello World test
+  list:
+    values: one,two,three
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'

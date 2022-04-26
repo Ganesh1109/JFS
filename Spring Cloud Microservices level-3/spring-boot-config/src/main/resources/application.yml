@@ -1,0 +1,21 @@
+db:
+  connection: 'connection-string'
+  host: 127.0.0.1
+  port: 1200
+
+dbValues: '{connectionString: ''http://_'',userName:''foo'',password:''pass''}'
+
+my:
+  greeting: Hello World
+  list:
+    values: one,two,three
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
+spring.cloud.config.uri: http://lcalhost:8888
+
+spring.application.name: spring-boot-config
